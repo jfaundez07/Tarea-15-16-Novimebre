@@ -1,3 +1,5 @@
+package ventanas;
+
 import modelo.Controlador;
 
 import javax.swing.*;
