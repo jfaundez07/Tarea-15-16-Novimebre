@@ -1,5 +1,3 @@
-package ventanas;
-
 import modelo.Controlador;
 
 import javax.swing.*;
@@ -14,7 +12,6 @@ public class VenataTrabajador extends JFrame implements ActionListener{
     private JFormattedTextField afp;
     private JFormattedTextField rut;
     private JButton buttonAgregar;
-    private JButton buttonMostrarTrabajadoresButton;
     private JLabel labelNombre;
     private JLabel labelApellido;
     private JLabel labelIsapre;
@@ -26,10 +23,11 @@ public class VenataTrabajador extends JFrame implements ActionListener{
     }
 
     private void setUpGui(){
+
         setTitle("Ingresar Trabajador");
         setLocationRelativeTo(null);
         setVisible(true);
-        setSize(800, 600);
+        setSize(500, 400);
         setContentPane(ventanaTrabajadorPanel);
 
         nombre.addActionListener(this);
@@ -38,7 +36,6 @@ public class VenataTrabajador extends JFrame implements ActionListener{
         afp.addActionListener(this);
         rut.addActionListener(this);
         buttonAgregar.addActionListener(this);
-        buttonMostrarTrabajadoresButton.addActionListener(this);
     }
 
     @Override
@@ -51,8 +48,7 @@ public class VenataTrabajador extends JFrame implements ActionListener{
                     isapre.getText(),
                     afp.getText()
             );
-        } else if (event.getSource().equals(buttonMostrarTrabajadoresButton)) {
-            Controlador.INSTANCE.mostrarTrabajadores();
         }
     }
+
 }

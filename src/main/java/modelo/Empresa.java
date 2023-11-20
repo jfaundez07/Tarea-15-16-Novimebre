@@ -6,15 +6,19 @@ public class Empresa {
 
     private ArrayList<Trabajador> trabajadores;
 
-    public Empresa(Trabajador newTrabajador) {
+    public Empresa() {
         this.trabajadores = new ArrayList<Trabajador>();
-        this.trabajadores.add(newTrabajador);
+    }
+
+    public void agregarTrabajador(Trabajador trabajador) {
+        this.trabajadores.add(trabajador);
     }
 
 
     public void mostrarTrabajadores() {
-        for (Trabajador trabajador : trabajadores) {
+        for(Trabajador trabajador : this.trabajadores) {
             trabajador.mostraDatos();
         }
     }
+
 }

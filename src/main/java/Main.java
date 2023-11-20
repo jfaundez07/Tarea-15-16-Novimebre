@@ -1,5 +1,3 @@
-import ventanas.VenataTrabajador;
-
 public class Main {
     public static void main(String[] args) {
         VenataTrabajador miGui = new VenataTrabajador();
